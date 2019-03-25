@@ -1,7 +1,7 @@
 <?php
 $firstname = 'Sebastien';
 // Je peut déclarer ma fonction en haut et la rappeler plus tard dans le php d'affichage.
-function stringTest ($firstnameParams) // Ma fonction 'test' contient une variable égale à une chaine de caractères.
+function stringTest ($firstnameParams)
 {
   return $firstnameParams;
 }
@@ -18,6 +18,5 @@ function stringTest ($firstnameParams) // Ma fonction 'test' contient une variab
 
 <!-- Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine. -->
 <p><?= stringTest($firstname) ?></p> <!-- Je fais un echo de ma fonction 'test' contenant ma chaine de caractère, et ma fonction est exectuée ici.-->
-
 </body>
 </html>

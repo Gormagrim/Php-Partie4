@@ -1,23 +1,21 @@
 <?php
-$gender = 'Relou' ; //Je déclares mes variables vides pour les initialiser
-$age = 29 ;
-// Je peut déclarer ma fonction en haut et la rappeler plus tard dans le php d'affichage.
-function testAgeAndGender ($genderParams, $ageParams) // Ma fonction 'test' contient mes deux variables initialisés plus haut.
-{
-  if ($genderParams == 'Femme' AND $ageParams > 18 AND $ageParams < 100) {
-    echo 'Vous êtes une femme et vous êtes majeur.';
-  }else if ($genderParams == 'Femme' AND $ageParams < 18 AND $ageParams > 0) {
-    echo 'Vous êtes une femme et vous êtes mineur.';
-  }else if ($genderParams == 'Homme' AND $ageParams > 18 AND $ageParams < 100) {
-    echo 'Vous êtes un homme et vous êtes majeur.';
-  }else if ($genderParams == 'Homme' AND $ageParams < 18 AND $ageParams > 0) {
-    echo 'Vous êtes un homme et vous êtes mineur.';
-  }else if ($genderParams != 'Femme' AND $genderParams != 'Homme') {
-    echo 'Merci d\'entrer un vrai genre ' . $genderParams . ', n\'est pas un genre !';
+$gender = 'Femme' ;
+$age = 20 ;
+function testAgeAndGender ($genderParams, $ageParams) { // Ma fonction 'test' contient mes deux variables initialisés plus haut.
+  if ($genderParams == 'Femme' && $ageParams > 18 && $ageParams < 100) {
+    $result = 'Vous êtes une femme et vous êtes majeur.';
+  }else if ($genderParams == 'Femme' && $ageParams < 18 && $ageParams > 0) {
+    $result = 'Vous êtes une femme et vous êtes mineur.';
+  }else if ($genderParams == 'Homme' && $ageParams > 18 && $ageParams < 100) {
+    $result = 'Vous êtes un homme et vous êtes majeur.';
+  }else if ($genderParams == 'Homme' && $ageParams < 18 && $ageParams > 0) {
+    $result = 'Vous êtes un homme et vous êtes mineur.';
+  }else if ($genderParams != 'Femme' && $genderParams != 'Homme') {
+    $result = 'Merci d\'entrer un vrai genre ' . $genderParams . ', n\'est pas un genre !';
   }else {
-    echo 'Merci d\'entrer votre vrai age ' . $ageParams . ', n\'est pas votre vrai age !';
+    $result = 'Merci d\'entrer votre vrai âge, ' . $ageParams . ' ans n\'est pas votre vrai âge !';
   }
-  return;
+  return $result;
 }
 ?>
 <!DOCTYPE html>

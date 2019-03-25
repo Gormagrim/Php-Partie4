@@ -2,8 +2,7 @@
 $firstName = 'Sebastien';
 $secondName = 'Sebastien';
 // Je peut déclarer ma fonction en haut et la rappeler plus tard dans le php d'affichage.
-function boolTest ($firstNameParams, $secondNameParams) // Ma fonction 'test' contient les valeurs des deux variables établies.
-{
+function boolTest ($firstNameParams, $secondNameParams) {
   if ($firstNameParams == $secondNameParams) { // Ici je fais la condition selon laquelle je vais executer la fontion 'test'.
     return true; // Si mon teste est bon alors il me 'retournera' true.
   }

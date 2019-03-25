@@ -1,10 +1,6 @@
 <?php
-$numberOne = 20 ; //Je déclares mes variables vides pour les initialiser
-$numberTwo = 27 ;
-$numberThree = 12;
 // Je peut déclarer ma fonction en haut et la rappeler plus tard dans le php d'affichage.
-function addTest ($numberOneParams, $numberTwoParams, $numberThreeParams) // Ma fonction 'test' contient mes deux variables initialisés plus haut.
-{
+function addTest ($numberOneParams = 20, $numberTwoParams = 27, $numberThreeParams = 12) { // Mes paramètres sont initialisés directement dans la déclaration de la fonction.
   return $numberOneParams + $numberTwoParams + $numberThreeParams;
 }
 ?>
@@ -19,7 +15,7 @@ function addTest ($numberOneParams, $numberTwoParams, $numberThreeParams) // Ma 
 
 <!-- Faire une fonction qui prend en paramètre trois nombres et qui renvoit la somme de ces nombres.
       Tous les paramètres doivent avoir une valeur par défaut. -->
-<p>La somme de <?= $numberOne ?> + <?= $numberTwo ?> + <?= $numberThree ?> = <?= addTest ($numberOne, $numberTwo, $numberThree) ?></p>
+<p><?= addTest () ?></p>
 
 </body>
 </html>

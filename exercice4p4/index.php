@@ -2,16 +2,15 @@
 $firstNumber = 10 ;
 $secondNumber = 100 ;
 // Je peut déclarer ma fonction en haut et la rappeler plus tard dans le php d'affichage.
-function testNumber ($firstNumberParams, $secondNumberParams)
-  {
-  if ($firstNumberParams > $secondNumberParams) {
-   echo 'Le premier nombre est plus grand.';
+function testNumber ($firstNumberParams, $secondNumberParams) {
+  if ($firstNumberParams == $secondNumberParams) {
+   $result = 'Les deux nombres sont identiques.';
  }else if ($firstNumberParams < $secondNumberParams){
-   echo 'Le premier nombre est plus petit.';
+   $result = 'Le premier nombre est plus petit.';
  }else{
-   echo 'Les deux nombres sont identiques.';
-   return;
+   $result = 'Les premier nombre est le plus grand.';
  }
+ return $result;
 }
 ?>
 <!DOCTYPE html>
@@ -29,6 +28,5 @@ function testNumber ($firstNumberParams, $secondNumberParams)
       Les deux nombres sont identiques si les deux nombres sont égaux -->
 <p>Mon premier nombre est égal à <?= $firstNumber ?> et mon second nombre est égal à <?= $secondNumber ?> donc :</p>
 <p><?= testNumber($firstNumber, $secondNumber) ?></p>
-
 </body>
 </html>
